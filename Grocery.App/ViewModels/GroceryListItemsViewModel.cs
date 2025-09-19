@@ -75,7 +75,6 @@ namespace Grocery.App.ViewModels
             {
                 Product = product
             };
-
             // Voeg het GroceryListItem toe aan de dataset middels de _groceryListItemsService
             var addedItem = _groceryListItemsService.Add(newItem);
             MyGroceryListItems.Add(addedItem);
@@ -97,6 +96,7 @@ namespace Grocery.App.ViewModels
             //Werk de voorraad (Stock) van het product bij en zorg dat deze wordt vastgelegd (middels _productService)
             //Werk de lijst AvailableProducts bij, want dit product is niet meer beschikbaar
             //call OnGroceryListChanged(GroceryList);
+
         }
     }
 }

@@ -32,3 +32,41 @@ De opdracht is om zelfstandig de login functionaliteit te laten werken.
 7. In App.xaml.cs staat //MainPage = new LoginView(viewModel); Haal hier de // weg en zet de regel erboven in commentaar, zodat AppShell wordt uitgeschakeld.  
 8. Uncomment de route naar het Login scherm in AppShell.xaml.cs: //Routing.RegisterRoute("Login", typeof(LoginView)); 
  
+
+
+# Gitflow Repository Structuur
+
+Deze repository maakt gebruik van **Gitflow** om de ontwikkeling gestructureerd te houden.  
+Volg de onderstaande richtlijnen voor branches en workflow.
+
+## Branches
+
+- **main**  
+  Bevat altijd de stabiele productierelease.
+
+- **develop**  
+  Hoofdbranch voor ontwikkeling; bevat de laatste ontwikkelversie.
+
+- **feature/***  
+  Voor nieuwe features of functionaliteiten.  
+  Voorbeeld: `feature/login-systeem`
+
+- **release/***  
+  Voorbereiding van een nieuwe release; bugfixes en kleine aanpassingen.  
+  Voorbeeld: `release/1.2.0`
+
+- **hotfix/***  
+  Voor kritieke fixes op de `main` branch.  
+  Voorbeeld: `hotfix/1.2.1`
+
+## Workflow
+
+1. Maak nieuwe **feature branches** vanuit `develop`.  
+2. Test en merge features terug naar `develop`.  
+3. Maak een **release branch** wanneer een release klaar is.  
+4. Merge de release naar `main` én `develop` en tag de release.  
+5. Gebruik **hotfix branches** voor urgente productiefixes en merge terug naar `main` én `develop`.  
+
+---
+
+**Tip:** Houd de branchnamen kort, duidelijk en beschrijvend.
